@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Timer</title>
+
+  <link rel="shortcut icon" href="assets/imgs/favicon.svg" type="image/x-svg">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <div id="counter">
+      <section id="timer">
+        <span id="minutes">25</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </section>
+
+      <section id="controls">
+        <button 
+          class="ph ph-play-circle"
+          data-action="toggleRunning">
+          <span class="sr-only">Iniciar contador</span>
+        </button>
+
+        <button 
+          class="ph ph-pause-circle"
+          data-action="toggleRunning">
+          <span class="sr-only">Pausar contador</span>
+        </button>
+
+        <button 
+          class="ph ph-stop-circle"
+          data-action="reset">
+          <span class="sr-only">Parar contador</span>
+        </button>
+
+        <button 
+          class="ph ph-plus-circle"
+          data-action="addCounter">
+          <span class="sr-only">Adicionar ao contador</span>
+        </button>
+
+        <button 
+          class="ph ph-minus-circle"
+          data-action="removeCounter">
+          <span class="sr-only">Diminuir do contador</span>
+        </button>
+      </section>
+    </div>
+
+    <div class="cards-colors-sounds">
+      <button class="card-color-sound" id="forest">
+        <span class="ph ph-tree"></span>
+      </button>
+
+      <button class="card-color-sound" id="rain">
+        <span class="ph ph-cloud-rain"></span>
+      </button>
+
+      <button class="card-color-sound" id="coffeeshop">
+        <span class="ph ph-storefront"></span>
+      </button>
+
+      <button class="card-color-sound" id="fireplace">
+        <span class="ph ph-flame flame"></span>
+      </button>
+    </div>
+  </div>
+</body>
+</html>

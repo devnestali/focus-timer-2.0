@@ -1,0 +1,123 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: hsl(0, 0%, 100%);
+  --primary-color: hsl(194, 97%, 31%);
+  --img-controls-color: hsl(240, 6%, 10%);
+  --card-color: #E1E1E6;
+
+  font-size: clamp(40%, 1% +  2vw, 62,5%);
+}
+
+.forest {
+  background: linear-gradient(180deg, rgb(23, 182, 230) 15%, rgba(255,117,0,1) 77%);
+  transition: background .5s ease-in-out;
+  
+}
+
+.rain {
+  background: linear-gradient(180deg, rgba(153,164,172,1) 15%, rgba(0,235,255,1) 77%);
+}
+
+.coffeeshop {
+  background: linear-gradient(180deg, rgba(236,183,94,1) 15%, rgba(186,109,7,1) 77%);
+}
+
+.fireplace {
+  background: linear-gradient(180deg, rgb(238, 215, 40) 15%, rgb(174, 22, 37) 77%);
+}
+
+body {
+  background: var(--bg-color);
+  
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  overflow: hidden;
+
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  appearance: none;
+}
+
+#app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 19.2rem;
+}
+
+#counter {
+  text-align: center;
+  color: var(--img-controls-color);
+}
+
+#timer {
+  display: flex;
+  
+  padding-bottom: 1.8rem;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: sans-serif
+}
+
+#controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+}
+
+#controls button {
+  background: transparent;
+  border: none;
+
+  cursor: pointer;
+  font-size: 2.5rem;
+}
+
+.cards-colors-sounds {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.8rem;
+}
+
+.card-color-sound {
+  background-color: var(--card-color);
+  
+  padding: 2.4rem 2.1rem;
+  border: none;
+  border-radius: 25%;
+  cursor: pointer;
+
+  transition: .5s background, color;
+}
+
+.card-color-sound span{
+  font-size: 3.6rem;
+}
+
+.card-color-sound:hover {
+  background: var(--primary-color);
+  color: var(--bg-color);
+}
+
+/* Controls */
+.running .ph-play-circle,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle{
+  display: none;
+}
+
